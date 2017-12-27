@@ -179,13 +179,13 @@ contract EVPToken is StandardToken, Pausable {
 	
 	uint256 public totalSupply = 22000000 * 1 ether;
 	string public name = "Evolution+ Token"; 
-    uint8 public decimals = 18; 
-    string public symbol = "EVP";
+	uint8 public decimals = 18; 
+	string public symbol = "EVP";
 	
 	// Contract constructor function sets initial token balances
 	function EVPToken() public {
-        balances[msg.sender] = totalSupply;
-    }
+		balances[msg.sender] = totalSupply;
+	}
 	
 	function transfer(address _to, uint256 _value) public whenNotPaused returns (bool) {
 		return super.transfer(_to, _value);
